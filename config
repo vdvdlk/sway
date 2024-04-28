@@ -85,7 +85,13 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag \
+        -t warning \
+        -m 'Você executou o atalho de encerramento. O quê quer fazer?' \
+        -B 'Encerrar sessão' 'swaymsg exit' \
+        -B 'Reiniciar' 'systemctl reboot' \
+        -B 'Desligar' 'systemctl poweroff'
 
     # Lock screen
     bindsym $mod+Escape exec swaylock
