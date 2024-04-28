@@ -1,0 +1,17 @@
+output 'Unknown SCEI MONITOR 0x00001731'
+{
+    mode 1920x1080
+    bg ~/Imagens/Gemasolar.jpg fill
+    # scale 1.0
+}
+
+input "1133:49995:Logitech_USB_Keyboard"
+{
+    xkb_layout br
+    xkb_numlock enabled
+}
+
+input "1386:890:Wacom_One_by_Wacom_S_Pen"
+{
+    left_handed enabled
+}
