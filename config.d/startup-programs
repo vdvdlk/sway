@@ -1,0 +1,5 @@
+exec wlsunset -l -22.9 -L -43.1
+exec dropbox start
+
+# exec firefox-esr && sway '[app_id="firefox-esr"]' move container to workspace 1
+exec swaymsg 'workspace 1; exec firefox-esr'
